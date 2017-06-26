@@ -14,10 +14,12 @@ BugBot responds well to natural language, thanks to [API.AI](https://api.ai/). Y
 It comes with a full bug-tracking system in-built so you get started with using BugBot for your organization immediately.
 
 ![Photo credit: Chris Traganos](https://cdn.glitch.com/97da0c25-cb78-4fa8-bc73-82994fe8867e%2FMessage.io-Cisco-Spark-BugBot-3.png?1498324264192)
+
 (Don't want to use the in-built bug-tracking system but still want to use the conversation interface? Read **Using other bug tracking systems** below).
 
 ## Setup
  1. Remix this project on Glitch by clicking here:
+ 
     [![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/remix/bugbot-messageio)
  1. Make an app on [developer.ciscospark.com](https://developer.ciscospark.com/).
      1. Login to [developer.ciscospark.com/add-bot.html](https://developer.ciscospark.com/add-bot.html).
