@@ -3,7 +3,7 @@
 
 The printer is out of toner! No worries, with BugBot you just fill out a simple chat conversation that converts into a ticket for your company’s helpdesk platform.
 
-BugBot is an intelligent, human-like bot that can help anyone report, view, and comment on, and generally manage bugs through a natural conversational interface.
+BugBot is an intelligent, human-like bot that can help anyone report, view, comment on, and generally manage bugs through a natural conversational interface.
 
 ![Photo credit: Chris Traganos](https://cdn.glitch.com/97da0c25-cb78-4fa8-bc73-82994fe8867e%2FMessage.io-Cisco-Spark-BugBot-1.png?1498324263642)
 
