@@ -1,8 +1,5 @@
-# 🐜🤖 
-# BugBot
+# 🐜🤖 BugBot
 *(from [Message.io](https://message.io/home))*
-
------------------------------------------------------
 
 The printer is out of toner! No worries, with BugBot you just fill out a simple chat conversation that converts into a ticket for your company’s helpdesk platform.
 
