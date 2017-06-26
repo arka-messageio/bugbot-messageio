@@ -1,0 +1,270 @@
+/*
+ * Message.io Developer Site.
+ * (Overrides for Bootstrap 3).
+ */
+
+/*
+  BOTS ARE
+  PEOPLE TOO.
+               \  .-.
+                 /_ _\
+                 |o^o|
+                 \ _ /
+                .-'-'-.              BLEEP BOOP BLOOP
+              /`)  .  (`\            (THIS MEANS YES)
+             / /|.-'-.|\ \         /
+             \ \| (_) |/ /  .-""-.
+              \_\'-.-'/_/  /[] _ _\
+              /_/ \_/ \_\ _|_o_LII|_
+                |'._.'|  / | ==== | \
+                |  |  |  |_| ==== |_|
+                 \_|_/    ||" ||  ||
+                 |-|-|    ||LI  o ||
+                 |_|_|    ||'----'||
+                /_/ \_\  /__|    |__\
+ */
+
+/* Pull in the Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700|Rajdhani:400,700|VT323');
+
+/* App Skinning */
+body {
+  padding-top: 50px;
+  font-family: 'Inconsolata';
+}
+
+h1 {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  color: #2f1944;
+}
+
+h1 small {
+  font-weight: 400;
+}
+
+h2, h4, h6 {
+  font-family: 'Inconsolata';
+  font-weight:700;
+  color: #2f1944;
+
+}
+
+h3, h5 {
+  font-family: 'VT323';
+  color: #5e0d8b;
+  /*color: #00acd7; This was the lighter blue*/
+  text-transform: uppercase;
+}
+
+a, a:focus, a:hover {
+  color: #5e0d8b;
+}
+
+p .label-md{
+  font-size: 100%;
+}
+
+/* masticons */
+h1.masticons {
+  font-size: 3em;
+}
+
+/* Navbar Customization */
+
+.navbar-custom {
+    background-color:#2f1a45;
+    color:#ffffff;
+    border-radius:0;
+}
+
+.navbar-brand, .navbar-custom .navbar-nav > li > a {
+    color:#fff;
+    text-shadow: none;
+}
+
+ .navbar-custom .navbar-nav > .active > a {
+    color: #ffffff;
+    background-color:transparent;
+}
+
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus,
+.navbar-custom .navbar-nav > .open >a {
+    text-decoration: none;
+    background-color: #522A6E;
+}
+
+.navbar-custom .navbar-brand {
+    color:#fff;
+    padding-right:30px;
+}
+.navbar-custom .navbar-toggle {
+    background-color:#522A6E;
+}
+.navbar-custom .icon-bar {
+    background-color:#fff;
+}
+
+.navbar-brand {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight:700;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Clean up */
+.logo {
+    display: inline-block;
+    height: auto;
+    width: 12px;
+    padding-top: 12px;
+    margin-right: 15px;
+}
+
+.logo img, .logo object {
+  width:100%;
+  padding-bottom: 15px;
+}
+
+/* .highlight */
+
+.highlights h3 {
+  font-size: 3em;
+  color:#fff;
+  text-transform: uppercase;
+}
+
+/* Features */
+.features .container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+div.tutorials {
+  background-color: rgba(218, 214, 224, 1);
+}
+
+ /* Reusable Gradient for the site */
+.gradient-bg {
+    height: 100%;
+    background: rgba(100,16,133,.9);
+    background: -moz-linear-gradient(left,rgba(100,16,133,.9) 0,rgba(118,20,118,.9) 27%,rgba(157,26,85,.9) 71%,rgba(194,33,54,.9) 91%,#d0232b 100%);
+    background: -webkit-linear-gradient(left,rgba(100,16,133,.9) 0,rgba(118,20,118,.9) 27%,rgba(157,26,85,.9) 71%,rgba(194,33,54,.9) 91%,#d0232b 100%);
+    background: linear-gradient(to right,rgba(100,16,133,.9) 0,rgba(118,20,118,.9) 27%,rgba(157,26,85,.9) 71%,rgba(194,33,54,.9) 91%,#d0232b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#641085', endColorstr='#d0232b', GradientType=1);
+}
+
+.borderless td, .borderless th {
+    border: none;
+}
+
+/* Glyphicon Settings */
+td a span.glyphicon-ok{
+  color: #5cb85c;
+}
+
+/* Footer */
+footer {
+  color: white;
+}
+
+footer h3 {
+  margin-bottom: 30px;
+  color:white;
+}
+
+footer a {
+  color: #00AEDC;
+}
+
+footer .footer-above {
+  padding-top: 50px;
+  background-color: #2f1a45;
+}
+
+footer .footer-col {
+  margin-bottom: 50px;
+}
+
+footer .footer-below {
+  padding: 25px 0;
+  background-color: #2f1a45;
+}
+
+/* Btn Social */
+.btn-social {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border: 2px solid white;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 20px;
+  line-height: 45px;
+}
+
+.btn:focus,
+.btn:active,
+.btn.active {
+  outline: none;
+}
+
+.btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
+    color: #00AEDC;
+    background: white;
+    border: solid 2px white;
+}
+
+/* Priority Colors for the thermometers */
+/* Top */
+td a i.fa-thermometer-full{
+  color: #d9534f;
+}
+
+/* Critical */
+td a i.fa-thermometer-three-quarters{
+  color: #f0ad4e;
+}
+
+/* High */
+td a i.fa-thermometer-half{
+  color: #FDE751;
+}
+
+/* Medium */
+td a i.fa-thermometer-quarter{
+  color: #5cb85c;
+}
+
+/* Low */
+td a i.fa-thermometer-empty{
+  color: #B8B1DC;
+}
+
+.description {
+  white-space: pre-line;
+}
+
+.remix-on-glitch {
+  background-color: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.jumbotron {
+  margin-bottom: 0px;
+}
+
+.modal-body {
+  font-size: 14pt;
+  text-align: center;
+}
+
+#bugbot-email {
+  font-weight: bold;
+  font-size: 18pt;
+}

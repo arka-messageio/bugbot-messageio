@@ -1,0 +1,91 @@
+{
+  "ok": [
+    "Okay.",
+    "Alright.",
+    "OK."
+  ],
+  "sorry to see you go": [
+    "Sorry to see you go.",
+    "Sorry to see you leave so early."
+  ],
+  "bye": [
+    "Bye for now!",
+    "Bye!",
+    "Goodbye.",
+    "Bye-bye!",
+    "'Till next time!"
+  ],
+  "how can I help": [
+    "What can I help you with today",
+    "How can I help you today",
+    "How can I help you",
+    "What can I help you with"
+  ],
+  "do you want": [
+    "do you want",
+    "would you like"
+  ],
+  "report a bug": [
+    "report a bug",
+    "file a bug report",
+    "send in a bug report",
+    "submit a bug report"
+  ],
+  "bug or bug report": [
+    "bug",
+    "bug report"
+  ],
+  "did not": [
+    "didn't",
+    "did not",
+    "couldn't",
+    "could not"
+  ],
+  "understand": [
+    "understand",
+    "get"
+  ],
+  "taken": [
+    "taken",
+    "claimed"
+  ],
+  "describe bug": [
+    "How would you describe this bug?",
+    "Describe the bug you're facing for me please."
+  ],
+  "great": [
+    "Great!",
+    "Superb!",
+    "Fantastic!",
+    "Nice!",
+    "Awesome!"
+  ],
+  "done": [
+    "done",
+    "finished"
+  ],
+  "creating": [
+    "Creating",
+    "Filing",
+    "Submitting",
+    "Sending in"
+  ],
+  "hi there": [
+    "Hi there!",
+    "Howdy!"
+  ],
+  "right now there are": [
+    "Right now, there are",
+    "Currently, there are",
+    "There are currently"
+  ],
+  "right now there is": [
+    "Right now, there is",
+    "Currently, there is",
+    "There is currently"
+  ],
+  "sorry": [
+    "Sorry",
+    "I'm sorry"
+  ]
+}

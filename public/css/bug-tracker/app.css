@@ -1,0 +1,60 @@
+/*
+ * Message.io BugBot Site.
+ * (Overrides for Developer Site and Bootstrap 3).
+ */
+
+.urgency-high {
+  color: red;
+}
+
+.urgency-medium {
+  color: #d9d900;
+}
+
+.urgency-low {
+  color: green;
+}
+
+.open-bug {
+  color: green;
+}
+
+.closed-bug {
+  color: brown;
+}
+
+.comments {
+  border-top: 1px solid #ddd;
+}
+
+.no-comments {
+  font-style: italic;
+  color: #808080;
+}
+
+.comment-header.name-input {
+  padding-bottom: 5px;
+}
+
+.comment-author {
+  font-weight: bold;
+}
+
+.comment-date {
+  font-family: monospace;
+  font-size: 10pt;
+  white-space: nowrap;
+}
+
+.comment-body {
+  white-space: pre-line;
+}
+
+form {
+  display: inline-block;
+}
+
+.table {
+  border-collapse: separate;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,38 @@
+{
+  "name": "bugbot-messageio",
+  "version": "0.0.1",
+  "description": "Chatbot that will listen to your problems and file help desk tickets for them",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.15.3",
+    "botkit": "0.5.4",
+    "apiai": "^4.0.2",
+    "botkit-middleware-apiai": "^0.1.1",
+    "ejs": "^2.5.6",
+    "lru-cache": "^4.1.1",
+    "dateformat": "^2.0.0",
+    "body-parser": "^1.17.2",
+    "uuid": "^3.1.0"
+  },
+  "engines": {
+    "node": "6.10.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/bugbot-messageio"
+  },
+  "author": "Arka Majumdar (Message.io) <arka@message.io>",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "node",
+    "glitch",
+    "express",
+    "chatbot",
+    "bot",
+    "ai",
+    "api.ai",
+    "botkit"
+  ]
+}

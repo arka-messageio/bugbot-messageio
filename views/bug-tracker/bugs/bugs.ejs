@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<%
+/*
+ * You may see Glitch complaining about errors in this document and that "Specia
+ * "Special characters must be escaped".
+ * 
+ * However, there are no errors in this file and Glitch is complaining because
+ * it does not understand the templating syntax that EJS uses to render this
+ * file on the server.
+ * 
+ * Do not try to escape the template delimiters yourself.
+ */
+%>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bug <%= bug.id %> – BugBot from Message.io</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/bug-tracker/app.css" rel="stylesheet">
+
+    <!-- Font Awesome!  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="http://message.io/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="http://message.io/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://message.io/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="http://message.io/favicon/manifest.json">
+    <link rel="mask-icon" href="http://message.io/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="http://message.io/favicon/favicon.ico">
+    <meta name="msapplication-config" content="http://message.io/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-custom navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <div class="navbar-left logo"><img src="https://cdn.glitch.com/97da0c25-cb78-4fa8-bc73-82994fe8867e%2Fm-io-white.svg?1497907421399"/></div>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">BugBot</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/bugs">Bugs</a></li>
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row featurette">
+        <div class="col-md-12">
+          <br/>
+          <h6 class="title">
+            <a href="/bugs">All Bugs</a> > Bug <%= bug.id %>
+          </h6>
+          <h2><%= bug.title %></h2>
+          <table class="table">
+            <tbody class="">
+              <thead>
+                <th>
+                  Details:
+                </th>
+                <th>
+                  &nbsp;
+                </th>
+              </thead>
+              <tr>
+                <td>STATUS:</td>
+                <td>
+                  <% if (bug.open) { %>
+                    <span class="open-bug">OPEN</span>
+                  <% } else { %>
+                    <span class="closed-bug">CLOSED</span>
+                  <% } %>
+                </td>
+              </tr>
+              <tr>
+                <td>URGENCY:</td>
+                <td class="urgency-<%= bug.urgency %>">
+                  <%= bug.urgency.toUpperCase() %>
+                </td>
+              </tr>
+              <tr>
+                <td>DATE OPENED:</td>
+                <td class="comment-date">
+                  <%= formatDate(bug.dateOpened) %>
+                </td>
+              </tr>
+              <tr>
+                <td>REPORTED BY:</td>
+                <td class="comment-author comment-header">
+                  <%= bug.reportedBy.name  %>
+                </td>
+              </tr>
+              <tr>
+                <td>SUBSCRIBED USERS:</td>
+                <td class="comment-author comment-header">
+                  <% for (var i = 0; i < bug.subscribedUsers.length; i++) { %>
+                    <%= bug.subscribedUsers[i].name %>
+                    <% if (i !== (bug.subscribedUsers.length - 1)) { %>
+                      <br/>
+                    <% } %>
+                  <% } %>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <% if (bug.open) { %>
+            <form action="#" id="close" method="post">
+              <input type="hidden" name="action" value="close"/>
+              <input type="submit" value="❌ Close Issue">
+            </form>
+          <% } %>
+          <form action="#" id="delete" method="post">
+            <input type="hidden" name="action" value="delete"/>
+            <input type="submit" value="🗑 Delete Issue">
+          </form>
+          <hr/>
+          <h3 class="description body-title">Description:</h3>
+          <blockquote class="description"><%= bug.description %></blockquote>
+          <div>
+            <h3>Comments:</h3>
+            <% if (bug.comments.length > 0) { %>
+              <% for (var i = 0; i < bug.comments.length; i++) {%>
+                <div class="comments">
+                  <div class="comment-header">
+                    <span class="comment-author"><%= bug.comments[i].author.name %></span> said on <span class="comment-date"><%= formatDate(bug.comments[i].date) %></span>:
+                  </div>
+                  <div class="comment-body"><%= bug.comments[i].body %></div>
+                </div>
+              <% } %>
+            <% } else { %>
+              <div class="comments">
+                <div class="comment-header no-comments">
+                  There aren't any comments here (yet).
+                </div>
+              </div>
+            <% } %>
+            <% if (bug.open) { %>
+              <div class="comments">
+                <div class="comment-header">
+                  Add your own comment:
+                </div>
+                <div>
+                  <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+                    <input type="hidden" name="action" value="comment"/>
+                    <div class="comment-header name-input">
+                      <label for="author">Name:</label>
+                      <input class="comment-author" type="text" name="author"/>
+                    </div>
+                    <textarea name="body" rows="10" cols="80"></textarea><br/>
+                    <input type="submit" value="Submit"/>
+                  </form>
+                </div>
+              </div>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /container -->
+    
+    <br/>
+    
+    <%- include ../../footer %>
+    
+    <!-- Bootstrap core JavaScript
+      ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+    </script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
