@@ -27,7 +27,7 @@ It comes with a full bug-tracking system in-built so you get started with using 
  1. Make an agent on [console.api.ai](https://console.api.ai/).
  1. Set up your `.env` file.
     1. Set `PUBLIC_URL` to the URL of this remixed Glitch project.
-    1. Copy the Access Token from you Cisco Spark bot into `CISCOSPARK_ACCESS_TOKEN`
+    1. Copy the Access Token from your Cisco Spark bot into `CISCOSPARK_ACCESS_TOKEN`
     1. Generate a random string of characters for `CISCOSPARK_SECRET`. This field is only used to authenticate responses from Cisco Spark and can be set to anything you want, as long as it is secret.
     1. Set `APIAI_ACCESS_TOKEN` to the Client Access Token from API.AI.
     1. If this project is a demo that is open to the public, you may want to set `ALLOW_LIST_ALL_BUGS` to false. Setting this variable to false will disable users from seeing all the bugs available, which is useful if you don't want other users seeing some rudely-titled bug someone else posted.
